@@ -1,37 +1,31 @@
-/**
- * @name Ultra Plus
- * @version 1.0.0
- * @author Max
- */
-
 (function () {
     'use strict';
 
-    function startPlugin() {
+    function start() {
 
         Lampa.Search.add({
-            title: '🔥 TEST',
+            title: '🔥 ULTRA',
             search: function (query, success) {
                 success([
                     {
-                        title: 'Плагин работает',
+                        title: 'УЛЬТРА РАБОТАЕТ',
                         url: '',
                         poster: ''
                     }
                 ]);
             },
             onSelect: function () {
-                Lampa.Noty.show('УЛЬТРА РАБОТАЕТ 🚀');
+                Lampa.Noty.show('ВСЁ ОК 🚀');
             }
         });
 
     }
 
     if (window.appready) {
-        startPlugin();
+        start();
     } else {
         Lampa.Listener.follow('app', function (e) {
-            if (e.type === 'ready') startPlugin();
+            if (e.type === 'ready') start();
         });
     }
 

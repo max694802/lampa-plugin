@@ -1,8 +1,12 @@
 (function () {
     'use strict';
 
-    Lampa.Listener.follow('app', function (e) {
-        if (e.type === 'ready') {
+    Lampa.Plugin.create({
+        name: 'Ultra Plus',
+        version: '1.0.0',
+        description: 'Тестовый плагин',
+
+        init: function () {
 
             Lampa.Search.add({
                 title: '🔥 TEST',
@@ -15,8 +19,8 @@
                         }
                     ]);
                 },
-                onSelect: function (item) {
-                    Lampa.Noty.show('Плагин работает');
+                onSelect: function () {
+                    Lampa.Noty.show('Плагин работает 🚀');
                 }
             });
 

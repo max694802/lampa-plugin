@@ -2,7 +2,7 @@
     'use strict';
 
     const CONFIG = {
-        proxy: 'https://corsproxy.io/?',
+        proxy: ''
         autoNext: true
     };
 
